@@ -2,9 +2,13 @@
 
 这里提供基于 OpenWrt 的 Relay 固件，面向以 **x86/64、UEFI、ext4** 运行的虚拟路由器。镜像预装 Relay 管理界面、Pearl 主题、PassWall 和 KMS 组件。新安装时使用通用配置。
 
+## OpenWrt 25.12.6 首个候选版
+
+2026 年 11 月 24 日发布。测试时，一台配有 80 GiB 虚拟磁盘的隔离 UEFI 虚拟机从 OpenWrt 25.12.5 升级到此版。重启后保留了测试配置，ext4 根文件系统容量为 **78.7 GiB**。[候选版镜像、软件包清单与签名](https://github.com/sweet0416/relay-firmware/releases/tag/vm124-25.12.6-r45410910293-rc1)
+
 ## 检查更新
 
-在已配置本通道的 Relay 界面打开 **更新 → 检查自家固件**。候选版标有「仅供测试」，适合在独立虚拟机中试用。正式版通过同一入口提供。固件版本和下载文件也可在 [Releases](https://github.com/sweet0416/relay-firmware/releases) 查看。
+在 Relay 打开 **更新 → 检查自家固件**。候选版验签成功后，页面会显示「候选版 · 仅供测试」和「发布清单签名已验证」。如需试用，请从发布页下载镜像，在独立虚拟机中安装。正式版发布后，可在 Relay 同一入口下载并校验镜像。[查看所有版本](https://github.com/sweet0416/relay-firmware/releases)
 
 OpenWrt 原生「有人值守系统升级」（Attended Sysupgrade）使用独立的构建服务 API。请保留其服务器设置，通过 Relay 访问本发布通道。
 
